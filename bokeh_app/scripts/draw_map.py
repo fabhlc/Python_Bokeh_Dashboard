@@ -102,7 +102,7 @@ def make_map(bikeshare, stations):
     selected_days.on_change('active', update)
 
     selected_duration = RangeSlider(start=5, end=60,
-                            step = 1, value = (5,15),
+                            step = 5, value = (5,15),
                             title = 'Max Duration of Bike Trips (mins)')
     selected_duration.on_change('value', update)
 
