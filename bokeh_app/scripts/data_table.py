@@ -9,7 +9,7 @@ def make_datatable(bikeshare):
     def make_dataset(bikeshare):
         # Create skeleton for dataframe:
         df = pd.DataFrame(columns=['origin', 'trips'])
-        df_count = bikeshare.groupby('from_station_name')['trip_id'].count().sort_values(ascending=False)
+        df_count = bikeshare.groupby('from_station_name')['from_station_name'].count().sort_values(ascending=False)
         df['origin'] = df_count.index
         df['trips'] = df_count.values
 
